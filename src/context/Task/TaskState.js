@@ -15,7 +15,7 @@ const TaskState = (props)=>{
 
     // getting tasks 
     const getTasks = async(todoId)=>{
-        const res = await axios.get(`http://localhost:4000/api/getTasks/${todoId}`,{
+        const res = await axios.get(`https://assignment-k-rite-backend.onrender.com/api/getTasks/${todoId}`,{
             headers
         });
         // console.log(res.data.tasks);
@@ -24,7 +24,7 @@ const TaskState = (props)=>{
 
     // add task 
     const addTask = async(todoId, task)=>{
-        const res = await axios.put(`http://localhost:4000/api/addTask/${todoId}`, {
+        const res = await axios.put(`https://assignment-k-rite-backend.onrender.com/api/addTask/${todoId}`, {
             main: task
         },{
             headers
@@ -37,7 +37,7 @@ const TaskState = (props)=>{
     // check task
     const checkTask = async(todoId, taskId)=>{
         console.log(headers)
-        const res = await axios.put(`http://localhost:4000/api/checkTask/${todoId}/${taskId}`,{},{
+        const res = await axios.put(`https://assignment-k-rite-backend.onrender.com/api/checkTask/${todoId}/${taskId}`,{},{
             headers
         })
         console.log(res);
@@ -48,7 +48,7 @@ const TaskState = (props)=>{
     // edit task 
     const editTask = async(todoId, taskId, editedPart)=>{
         console.log(cookies.token)
-        const res = await axios.put(`http://localhost:4000/api/editTask/${todoId}/${taskId}`,editedPart,{
+        const res = await axios.put(`https://assignment-k-rite-backend.onrender.com/api/editTask/${todoId}/${taskId}`,editedPart,{
             headers
         })
         console.log(res);

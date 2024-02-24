@@ -34,7 +34,7 @@ const Login = () => {
                 return
             }
 
-            const res = await axios.post(`http://localhost:4000/api/v1/u/login`,{
+            const res = await axios.post(`https://assignment-k-rite-backend.onrender.com/api/v1/u/login`,{
                 email,
                 password
             })
